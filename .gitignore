@@ -1,0 +1,5 @@
+node_modules
+typings/*
+!typings/semantic.d.ts
+com.vlado.angular2cordova/platforms/android
+com.vlado.angular2cordova/www/js/app

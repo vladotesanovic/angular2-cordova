@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+
+        <script src="js/vendor/es6-shim.min.js"></script>
+        <script src="js/vendor/system-polyfills.js"></script>
+    
+        <script src="js/vendor/angular2-polyfills.min.js"></script>
+        <script src="js/vendor/system.js"></script>
+        <script src="js/vendor/jquery.min.js"></script>
+        <script>
+            System.config({
+                defaultJSExtensions: true,
+                paths: {                
+                    'semantic-ui/dist/components/*': 'js/vendor/semantic/dist/components/*.js'
+                },
+                map: {
+                    'ng-semantic/semantic': 'js/vendor/ng-semantic/semantic.js'
+                },
+                packages: {        
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                }
+            });
+        </script>        
+        <script src="js/vendor/Rx.min.js"></script>
+        <script src="js/vendor/angular2.js"></script>
+        <script src="js/vendor/http.js"></script>
+        <script src="js/vendor/router.js"></script>
+        <title>Angular2 Cordova</title>
+    </head>
+    <body>
+        <app>
+            <div class="ui active inverted dimmer">
+                <div class="ui text large loader">Loading</div>
+            </div>
+        </app>
+        <script>
+            System.import('js/app/main')
+                    .then(null, console.error.bind(console));
+        </script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
