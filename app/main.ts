@@ -6,10 +6,18 @@ import {SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES} from "ng-semantic/semantic";
     directives: [SEMANTIC_COMPONENTS, SEMANTIC_DIRECTIVES],
     styles: [".ui.container { margin-top: 7em; }"],
     selector: 'app',
-    template: `<sm-menu title="Labeled Icon" class="ui fluid three item labeled icon menu inverted blue fixed">
+    template: `<sm-menu title="Labeled Icon" class="ui fluid four item labeled icon menu inverted blue fixed">
         <a sm-item icon="gamepad" class="item">Games</a>
         <a sm-item icon="video camera" class="item">Chanel</a>
-        <a sm-item icon="video play" class="item">Videos</a>    
+        <a sm-item icon="video play" class="item">Videos</a>
+        <sm-menu class="ui menu right secondary icon">
+            <a sm-item icon="sidebar big" class="item" sm-dir-sidebar="right"></a>
+            <sm-sidebar class="right vertical sidebar labeled menu huge">
+                <a sm-item icon="home" class="item">Home</a>
+                <a sm-item icon="block layout" class="item">Topics</a>
+                <a sm-item icon="smile" class="item">Friends</a>
+            </sm-sidebar>
+        </sm-menu>  
     </sm-menu>
     
     <div class="ui container">

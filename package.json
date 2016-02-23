@@ -6,7 +6,7 @@
   "scripts": {
     "develop": "tsc -w",
     "build": "cd com.vlado.angular2cordova && cordova build",
-    "test": "cd com.vlado.angular2cordova/www && python -m SimpleHTTPServer 8888",
+    "demo": "cd com.vlado.angular2cordova/www && python -m SimpleHTTPServer 8888",
     "postinstall": "typings install && cordova platform add android && tsc"
   },
   "repository": {

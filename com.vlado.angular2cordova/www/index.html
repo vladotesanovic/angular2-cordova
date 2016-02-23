@@ -47,12 +47,14 @@
         <script src="js/vendor/router.js"></script>
         <title>Angular2 Cordova</title>
     </head>
-    <body>
-        <app>
-            <div class="ui active inverted dimmer">
-                <div class="ui text large loader">Loading</div>
-            </div>
-        </app>
+    <body class="pushable">
+        <div class="pusher">
+            <app>
+                <div class="ui active inverted dimmer">
+                    <div class="ui text large loader">Loading</div>
+                </div>
+            </app>
+        </div>
         <script>
             System.import('js/app/main')
                     .then(null, console.error.bind(console));
